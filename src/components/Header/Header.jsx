@@ -52,10 +52,10 @@ function Navbar() {
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
-              <h1 className="  block lg:hidden h-8 w-auto">
+              <h1 className=" font-bold block lg:hidden h-8 w-auto">
                 CodingDuck
               </h1>
-              <h1 className="  hidden lg:block h-8 w-auto">
+              <h1 className=" font-bold hidden lg:block h-8 w-auto">
                 CodingDuck
               </h1>
 
