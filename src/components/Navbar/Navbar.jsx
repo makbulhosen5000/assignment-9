@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import image from '../../../public/logo.png';
+import { Link, useLocation } from "react-router-dom";
+import image from "../../../public/logo.png";
 
 function Navbar() {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className=" text-black">
+    <nav className=" bg-gray-700">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -53,38 +54,56 @@ function Navbar() {
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
-                <img
-                  src={image}
-                  className="font-bold block lg:hidden h-10 w-auto"
-                  alt=""
-                />
-                <img src={image}  className=" font-bold hidden lg:block h-10 w-auto" alt="" />
-            
-              
+              <img
+                src={image}
+                className="font-bold block lg:hidden h-10 w-auto"
+                alt=""
+              />
+              <img
+                src={image}
+                className=" font-bold hidden lg:block h-10 w-auto"
+                alt=""
+              />
             </div>
             <div className="hidden sm:block sm:ml-6 flex-grow">
               <div className="flex justify-center">
                 <Link
                   to="/"
-                  className="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                    location.pathname === "/"
+                      ? "bg-yellow-500 text-white"
+                      : "text-gray-300"
+                  }`}
                 >
                   Home
                 </Link>
                 <Link
                   to="/statistics"
-                  className="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                    location.pathname === "/statistics"
+                      ? "bg-yellow-500 text-white"
+                      : "text-gray-300"
+                  }`}
                 >
                   Statistics
                 </Link>
                 <Link
                   to="/job"
-                  className="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                    location.pathname === "/job"
+                      ? "bg-yellow-500 text-white"
+                      : "text-gray-300"
+                  }`}
                 >
                   Applied Jobs
                 </Link>
                 <Link
                   to="/blog"
-                  className="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                    location.pathname === "/blog"
+                      ? "bg-yellow-500 text-white"
+                      : "text-gray-300"
+                  }`}
                 >
                   Blog
                 </Link>
@@ -92,7 +111,6 @@ function Navbar() {
             </div>
           </div>
           <div className="hidden sm:block sm:ml-6">
-            {" "}
             <div className="flex items-center">
               <button
                 type="button"
@@ -110,25 +128,41 @@ function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link
               to="/"
-              className="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                location.pathname === "/"
+                  ? "bg-yellow-500 text-white"
+                  : "text-gray-300"
+              }`}
             >
               Home
             </Link>
             <Link
               to="/statistics"
-              className="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                location.pathname === "/statistics"
+                  ? "bg-yellow-500 text-white"
+                  : "text-gray-300"
+              }`}
             >
               Statistics
             </Link>
             <Link
               to="/job"
-              className="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                location.pathname === "/job"
+                  ? "bg-yellow-500 text-white"
+                  : "text-gray-300"
+              }`}
             >
               Applied Jobs
             </Link>
             <Link
               to="/blog"
-              className="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                location.pathname === "/blog"
+                  ? "bg-yellow-500 text-white"
+                  : "text-gray-300"
+              }`}
             >
               Blog
             </Link>
