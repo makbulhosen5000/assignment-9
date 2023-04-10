@@ -23,8 +23,8 @@ const router = createBrowserRouter([
       {
         path: "details/:jobId",
         element: <JobDetails />,
-        //loader: ({ params }) =>fetch(`https://jsonplaceholder.typicode.com/posts/${params.jobId}`),
-        loader: ({ params }) => fetch(`job.json/${params.jobId}`),
+        loader: ({ params }) =>fetch(`https://jsonplaceholder.typicode.com/posts/${params.jobId}`),
+        //loader: ({ params }) => fetch(`job.json/${params.jobId}`),
       },
       {
         path: "statistics",
