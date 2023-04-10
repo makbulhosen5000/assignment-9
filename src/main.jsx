@@ -4,7 +4,7 @@ import App from './App'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Home from './components/Home.jsx/Home';
+import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import Job from './components/Job/Job';
 import Blog from './components/Blog/Blog';
@@ -17,6 +17,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <App />,
+        loader: () => fetch("job.json"),
       },
       {
         path: "statistics",
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "*",
-        element: <NotFound/>,
+        element: <NotFound />,
       },
     ],
   },
