@@ -8,7 +8,6 @@ import FeaturedJob from "./components/FeaturedJob/FeaturedJob";
 function App() {
 
   const [seeMore, setSeeMore] = useState(false);
-  console.log("show-all--", seeMore);
   const loadData = useLoaderData();
   
   const handleSeeMore = () => {

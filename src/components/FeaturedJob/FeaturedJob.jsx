@@ -1,11 +1,11 @@
 import React from 'react';
 import locationImg from '../../assets/Icons/Frame-4.png'
 import salaryImg from "../../assets/Icons/Frame.png";
+import { Link } from 'react-router-dom';
 
 const FeaturedJob = ({ data }) => {
-  const { company_logo_url, company_name, job_type, job_location, salary } =
+  const { id,company_logo_url, company_name, job_type, job_location, salary } =
     data;
-  console.log(data);
   return (
     <div>
       <div className="bg-blue-50 border-2 rounded-md">
@@ -19,7 +19,11 @@ const FeaturedJob = ({ data }) => {
             <img src={salaryImg} alt="" />
             {salary}
           </div>
-          <button className=" bg-blue-400 p-2 rounded">View Details</button>
+          <p>
+            <Link to={`/details/${id}`} className=" bg-blue-400 p-2 rounded">
+              View Details
+            </Link>
+          </p>
         </div>
       </div>
     </div>
