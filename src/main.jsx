@@ -12,6 +12,10 @@ import NotFound from './components/NotFound';
 import JobDetails from './components/JobDetails/JobDetails';
 const router = createBrowserRouter([
   {
+    path: "*",
+    element: <NotFound />,
+  },
+  {
     path: "/",
     element: <Home />,
     children: [
@@ -20,11 +24,13 @@ const router = createBrowserRouter([
         element: <App />,
         loader: () => fetch("job.json"),
       },
+
       {
         path: "details/:jobId",
         element: <JobDetails />,
-        loader: ({ params }) =>fetch(`https://jsonplaceholder.typicode.com/posts/${params.jobId}`),
-        //loader: ({ params }) => fetch(`job.json/${params.jobId}`),
+        loader: ({ params }) =>
+        fetch(`job.json/${params.jobId}`).then((response) => response.json()),
+        loader: ({ params }) => fetch(`job.json/${params.jobId}`),
       },
       {
         path: "statistics",
@@ -33,14 +39,11 @@ const router = createBrowserRouter([
       {
         path: "job",
         element: <Job />,
+        loader: () => fetch("job.json"),
       },
       {
         path: "blog",
         element: <Blog />,
-      },
-      {
-        path: "*",
-        element: <NotFound />,
       },
     ],
   },
