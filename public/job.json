@@ -1,6 +1,6 @@
 [
   {
-  "id":1,
+  "_id":1,
   "company_name": "Microsoft",
   "company_logo_url": "https://logo.clearbit.com/microsoft.com",
   "company_address": "One Microsoft Way, Redmond, WA 98052, USA",
@@ -25,7 +25,7 @@
 },
 
 {
-  "id":2,
+  "_id":2,
   "company_name": "Amazon",
   "education": "CSE,SE",
   "company_logo_url": "https://logo.clearbit.com/amazon.com",
@@ -50,7 +50,7 @@
 },
 
 {
-  "id":3,
+  "_id":3,
   "company_name": "Google",
   "company_logo_url": "https://logo.clearbit.com/google.com",
   "company_address": "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA",
@@ -75,7 +75,7 @@
 },
 
 {
-  "id":4,
+  "_id":4,
   "company_name": "Apple",
   "company_logo_url": "https://logo.clearbit.com/apple.com",
   "company_address": "1 Apple Park Way, Cupertino, CA 95014, USA",
@@ -99,7 +99,7 @@
   "salary": "$130,000 - $170,000"
 },
 {
-  "id":5,
+  "_id":5,
   "company_name": "Facebook",
   "company_logo_url": "https://logo.clearbit.com/facebook.com",
   "company_address": "1 Hacker Way, Menlo Park, CA 94025, USA",
@@ -123,7 +123,7 @@
   "salary": "$120,000 - $160,000"
 },
 {
-  "id":6,
+  "_id":6,
   "company_name": "Uber",
   "company_logo_url": "https://logo.clearbit.com/uber.com",
   "company_address": "1455 Market St #400, San Francisco, CA 94103, USA",
@@ -148,7 +148,7 @@
 },
 
 {
-  "id":7,
+  "_id":7,
   "company_name": "Tesla",
   "company_logo_url": "https://logo.clearbit.com/tesla.com",
   "company_address": "3500 Deer Creek Rd, Palo Alto, CA 94304, USA",
@@ -172,7 +172,7 @@
   "salary": "$100,000 - $140,000"
 },
 {
-  "id":8,
+  "_id":8,
   "company_name": "IBM",
   "company_logo_url": "https://logo.clearbit.com/ibm.com",
   "company_address": "1 New Orchard Road, Armonk, NY 10504, USA",

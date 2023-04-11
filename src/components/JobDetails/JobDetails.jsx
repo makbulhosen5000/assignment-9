@@ -1,14 +1,14 @@
-import { stringify } from 'postcss';
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+
+import { useLoaderData} from 'react-router-dom';
+import toast from "react-hot-toast";
+
 
 const JobDetails = () => {
     const loadData = useLoaderData();
-    console.log("data--",loadData);
-    
     //apply Now
     const applyNow = (loadData) => {
       localStorage.setItem(JSON.stringify(loadData), loadData.id);
+      toast("Save Successfully");
     };
 
     return (
@@ -16,8 +16,9 @@ const JobDetails = () => {
         <h1 className="text-center font-bold my-10 text-3xl">Job Details</h1>
         <div className="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 my-10">
           <div className="text-justify col-span-3">
+          
             <h1>
-              <span className="font-bold"> Job Description:</span> A UI/UX (User
+              <span className="font-bold">Job Description:</span> A UI/UX (User
               Interface/User Experience) designer is responsible for designing
               and creating engaging and effective interfaces for software and
               web applications. This includes designing the layout, visual
@@ -43,7 +44,7 @@ const JobDetails = () => {
             </h1>
 
             <p>Salary: 100K - 150K (Per Month)</p>
-            <p>Job Title : {loadData.title}</p>
+            <p>Job Title : sdf</p>
             <h1 className="font-bold border-b-2 border-blue-300">
               Contact Information:
             </h1>
