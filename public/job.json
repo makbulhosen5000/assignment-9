@@ -4,11 +4,8 @@
   "company_name": "Microsoft",
   "company_logo_url": "https://logo.clearbit.com/microsoft.com",
   "company_address": "One Microsoft Way, Redmond, WA 98052, USA",
-  "contact_info": {
-    "phone": "1-800-642-7676",
-    "email": "support@microsoft.com",
-    "website": "https://www.microsoft.com/en-us/contact"
-  },
+  "phone": "1-800-642-7676",
+  "email": "support@microsoft.com",
   "job_title": "Software Engineer",
   "education": "CSE,SE",
   "job_type": "Remote",
@@ -30,13 +27,10 @@
   "education": "CSE,SE",
   "company_logo_url": "https://logo.clearbit.com/amazon.com",
   "company_address": "410 Terry Ave N, Seattle, WA 98109, USA",
-  "contact_info": {
-    "phone": "1-888-280-4331",
-    "email": "cis@amazon.com",
-    "website": "https://www.amazon.com/gp/help/customer/display.html/"
-  },
+  "phone": "1-888-280-4331",
+  "email": "cis@amazon.com",
   "job_title": "Operations Manager",
-  "job_type": "Part-time",
+  "job_type": "full-time",
   "job_location": "Seattle, WA",
   "job_requirements": [
     "Bachelor's degree in Business Administration, Engineering, or related field",
@@ -54,13 +48,10 @@
   "company_name": "Google",
   "company_logo_url": "https://logo.clearbit.com/google.com",
   "company_address": "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA",
-  "contact_info": {
-    "phone": "1-650-253-0000",
-    "email": "press@google.com",
-    "website": "https://about.google/contact-google/"
-  },
+  "phone": "1-650-253-0000",
+  "email": "press@google.com",
   "job_title": "Product Manager",
-   "education": "CSE,SE",
+  "education": "CSE,SE",
   "job_type": "Full-time",
   "job_location": "Mountain View, CA",
   "job_requirements": [
@@ -79,11 +70,8 @@
   "company_name": "Apple",
   "company_logo_url": "https://logo.clearbit.com/apple.com",
   "company_address": "1 Apple Park Way, Cupertino, CA 95014, USA",
-  "contact_info": {
-    "phone": "1-800-275-2273",
-    "email": "applestore_customer_service@apple.com",
-    "website": "https://www.apple.com/contact/"
-  },
+  "phone": "1-800-275-2273",
+  "email": "applestore@apple.com",
   "job_title": "iOS Developer",
    "education": "CSE,SE",
   "job_type": "Full-time",
@@ -103,11 +91,8 @@
   "company_name": "Facebook",
   "company_logo_url": "https://logo.clearbit.com/facebook.com",
   "company_address": "1 Hacker Way, Menlo Park, CA 94025, USA",
-  "contact_info": {
-    "phone": "1-650-308-7300",
-    "email": "info@fb.com",
-    "website": "https://www.facebook.com/help/"
-  },
+  "phone": "1-650-308-7300",
+  "email": "info@fb.com",
   "job_title": "Data Scientist",
    "education": "CSE,SE",
   "job_type": "Full-time",
@@ -127,11 +112,8 @@
   "company_name": "Uber",
   "company_logo_url": "https://logo.clearbit.com/uber.com",
   "company_address": "1455 Market St #400, San Francisco, CA 94103, USA",
-  "contact_info": {
-    "phone": "1-866-576-1039",
-    "email": "support@uber.com",
-    "website": "https://www.uber.com/us/en/about/contact/"
-  },
+  "phone": "1-866-576-1039",
+  "email": "support@uber.com",
   "job_title": "Product Designer",
    "education": "CSE,SE",
   "job_type": "Remote",
@@ -152,11 +134,8 @@
   "company_name": "Tesla",
   "company_logo_url": "https://logo.clearbit.com/tesla.com",
   "company_address": "3500 Deer Creek Rd, Palo Alto, CA 94304, USA",
-  "contact_info": {
-    "phone": "1-888-518-3752",
-    "email": "CustomerSupport@tesla.com",
-    "website": "https://www.tesla.com/contact"
-  },
+  "phone": "1-888-518-3752",
+  "email": "CustomerSupport@tesla.com",
   "job_title": "Mechanical Engineer",
    "education": "CSE,SE",
   "job_type": "Remote",
@@ -176,11 +155,8 @@
   "company_name": "IBM",
   "company_logo_url": "https://logo.clearbit.com/ibm.com",
   "company_address": "1 New Orchard Road, Armonk, NY 10504, USA",
-  "contact_info": {
-    "phone": "1-800-IBM-4YOU",
-    "email": "ibm@ibm.com",
-    "website": "https://www.ibm.com/support/home/"
-  },
+  "phone": "1-800-IBM-4YOU",
+  "email": "ibm@ibm.com",
   "job_title": "Artificial Intelligence Engineer",
    "education": "CSE,SE",
   "job_type": "Remote",

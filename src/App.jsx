@@ -3,7 +3,6 @@ import JobCategory from "./components/JobCategory/JobCategory";
 import Home2 from "./components/Home/Home2";
 import { useLoaderData } from "react-router-dom";
 import FeaturedJob from "./components/FeaturedJob/FeaturedJob";
-import { blogData } from "../public/data";
 
 
 function App() {

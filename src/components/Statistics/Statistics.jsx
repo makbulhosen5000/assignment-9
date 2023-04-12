@@ -6,7 +6,7 @@ const Statistics = () => {
     return (
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 my-10 items-center justify-center">
         <div className='text-center border-2 rounded-md bg-slate-500 text-lime-50 p-2'>
-          <h1>Name: Assignment -9</h1>
+          <h1>Name: Assignment - 9</h1>
           <h1>Total Mark: 60</h1>
           <h1>Student ID: WEB7-1405</h1>
         </div>

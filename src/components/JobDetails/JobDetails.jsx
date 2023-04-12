@@ -1,66 +1,78 @@
 
 import { useLoaderData} from 'react-router-dom';
 import toast from "react-hot-toast";
+import { useEffect, useState } from 'react';
+import { addToDb } from '../../../utilitis/fakeDB';
 
 
 const JobDetails = () => {
-    const loadData = useLoaderData();
-    //apply Now
-    const applyNow = (loadData) => {
-      localStorage.setItem(JSON.stringify(loadData), loadData.id);
-      toast("Save Successfully");
-    };
 
-    return (
-      <div>
-        <h1 className="text-center font-bold my-10 text-3xl">Job Details</h1>
-        <div className="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 my-10">
-          <div className="text-justify col-span-3">
-          
-            <h1>
-              <span className="font-bold">Job Description:</span> A UI/UX (User
-              Interface/User Experience) designer is responsible for designing
-              and creating engaging and effective interfaces for software and
-              web applications. This includes designing the layout, visual
-              design, and interactivity of the user interface.
-            </h1>
-            <h1>
-              <span className="font-bold">Job Responsibility: </span>
-              Collaborating with cross-functional teams: UI/UX designers often
-              work closely with other teams, including product management,
-              engineering, and marketing, to ensure that the user interface is
-              aligned with business and technical requirements. You will need to
-              be able to effectively communicate your design ideas and gather
-              feedback from other team members.
-            </h1>
-            <h1 className="font-bold">Educational Requirements:</h1>
-            <h1>Bachelor degree to complete any reputational university.</h1>
-            <h1 className="font-bold">Experiences:</h1>
-            <h1>2-3 Years in this field.</h1>
-          </div>
-          <div className="bg-blue-200 p-3 col-span-1">
-            <h1 className="font-bold border-b-2 border-blue-300">
-              Job Details
-            </h1>
+  const id = useLoaderData();
+  const [jobDetails, setJobDetails] = useState([]);
+  //console.log("jobDetails..", jobDetails);
+   useEffect(() => {
+    fetch("/job.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const job = data.find((item) => item._id == id);
+        setJobDetails(job);
+      });
 
-            <p>Salary: 100K - 150K (Per Month)</p>
-            <p>Job Title : sdf</p>
-            <h1 className="font-bold border-b-2 border-blue-300">
-              Contact Information:
-            </h1>
-            <p>Phone : 01750-00 00 00</p>
-            <p>Email : info@gmail.com</p>
-            <p>Address : Dhanmondi 32, Sukrabad Dhaka, Bangladesh</p>
-            <button
-              onClick={() => applyNow(loadData)}
-              className="w-full p-3 bg-blue-500 rounded-md"
-            >
-              Apply Now
-            </button>
-          </div>
+    // const loadData = async () => {
+    //   const res = await fetch("/job.json");
+    //   const data = await res.json();
+    //   //const findData = data.find((dt) => dt._id === id);
+    //   setJobDetails(data.find((dt) => dt._id === id));
+    // };
+    // loadData();
+  }, []);
+
+  //const loadData = useLoaderData();
+  //apply Now
+  const handleAddToCart  = (id) => {
+    console.log(id);
+    addToDb(id);
+    toast(" Job Apply Successfully");
+  };
+
+  return (
+    <div>
+      <h1 className="text-center font-bold my-10 text-3xl">Job Details</h1>
+      <div className="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 my-10">
+        <div className="text-justify col-span-3">
+          <h1>
+            <span className="font-bold">Job Description:</span>
+            {jobDetails.job_requirements}
+          </h1>
+          <h1>
+            <span className="font-bold">Job Responsibility: </span>
+            {jobDetails.job_description}
+          </h1>
+          <h1 className="font-bold">Educational Requirements:</h1>
+          <h1>{jobDetails.education}</h1>
+          <h1 className="font-bold">Experiences:</h1>
+          <h1>2-3 Years in this field.</h1>
+        </div>
+        <div className="bg-blue-200 p-3 col-span-1">
+          <h1 className="font-bold border-b-2 border-blue-300">Job Details</h1>
+
+          <p>{jobDetails.salary}</p>
+          <h1 className="font-bold border-b-2 border-blue-300">
+            Contact Information:
+          </h1>
+          <p>Phone : {jobDetails.phone}</p>
+          <p>Email : {jobDetails.email}</p>
+          <p>Address : {jobDetails.company_address}</p>
+          <button
+            onClick={() => handleAddToCart (id)}
+            className="w-full p-3 bg-blue-500 rounded-md"
+          >
+            Apply Now
+          </button>
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default JobDetails;

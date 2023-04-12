@@ -14,7 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    //errorElement: <NotFound />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
@@ -34,9 +34,7 @@ const router = createBrowserRouter([
       {
         path: "details/:jobId",
         element: <JobDetails />,
-        //loader: ({ params }) => fetch(`job.json/${params.jobId}`),
-        loader: ({ params }) =>
-          fetch(`https://jsonplaceholder.typicode.com/users/${params.jobId}`),
+        loader: ({ params }) => params.jobId,
       },
       {
         path: "blog",
