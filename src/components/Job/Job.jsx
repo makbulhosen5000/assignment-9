@@ -2,23 +2,12 @@
 import { useLoaderData } from 'react-router-dom';
 import LoadJob from './LoadJob';
 import { getStoredCart } from '../../../utilitis/fakeDB';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 const Job = () => {
-  const [job,setJob] = useState([]);
   const loadData = useLoaderData();
 
-  let cart = [];
-  const savedCart = getStoredCart();
-  for (const id in savedCart) {
-    const foundJob = loadData.find((jd) => jd._id === id);
-    if (foundJob) {
-      foundJob.quantity = savedCart[id];
-      cart.push(foundJob);
-    }
-  }
-  
   return (
     <div>
       <div className="flex justify-between my-10">
